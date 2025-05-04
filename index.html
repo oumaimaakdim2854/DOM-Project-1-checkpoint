@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Shopping Cart</h1>
+        
+        <div class="cart-container">
+            <!-- Cart items container -->
+            <div class="cart-items">
+                <!-- Cart Item 1 -->
+                <div class="cart-item">
+                    <div class="item-image">
+                        <img src="/assets/Measurable Difference Oils.jpg" alt="Product 1">
+                    </div>
+                    <div class="item-details">
+                        <h2 class="item-title">Measurable Oils</h2>
+                        <p class="item-description">Measurable oils are precisely quantifiable liquid fats used in cooking, manufacturing, and therapeutic applications.</p>
+                        <div class="price" data-price="149.99">$149.99</div>
+                        <div class="item-actions">
+                            <div class="quantity-controls">
+                                <button class="minus-btn"><i class="fas fa-minus"></i></button>
+                                <span class="quantity-value">1</span>
+                                <button class="plus-btn"><i class="fas fa-plus"></i></button>
+                            </div>
+                            <button class="like-btn"><i class="fas fa-heart"></i></button>
+                            <button class="remove-btn"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cart Item 2 -->
+                <div class="cart-item">
+                    <div class="item-image">
+                        <img src="./assets/Our Lavender Oil.jpg" alt="Product 2">
+                    </div>
+                    <div class="item-details">
+                        <h2 class="item-title">Lavender Oil</h2>
+                        <p class="item-description">Lavender oil is a versatile essential oil derived from lavender flowers known for its calming fragrance and soothing properties.</p>
+                        <div class="price" data-price="199.99">$199.99</div>
+                        <div class="item-actions">
+                            <div class="quantity-controls">
+                                <button class="minus-btn"><i class="fas fa-minus"></i></button>
+                                <span class="quantity-value">1</span>
+                                <button class="plus-btn"><i class="fas fa-plus"></i></button>
+                            </div>
+                            <button class="like-btn"><i class="fas fa-heart"></i></button>
+                            <button class="remove-btn"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cart Item 3 -->
+                <div class="cart-item">
+                    <div class="item-image">
+                        <img src="./assets/téléchargement (45).jpg" alt="Product 3">
+                    </div>
+                    <div class="item-details">
+                        <h2 class="item-title">Rose Oil</h2>
+                        <p class="item-description">Rose oil is a luxurious and aromatic essential oil extracted from rose petals through steam distillation</p>
+                        <div class="price" data-price="29.99">$29.99</div>
+                        <div class="item-actions">
+                            <div class="quantity-controls">
+                                <button class="minus-btn"><i class="fas fa-minus"></i></button>
+                                <span class="quantity-value">1</span>
+                                <button class="plus-btn"><i class="fas fa-plus"></i></button>
+                            </div>
+                            <button class="like-btn"><i class="fas fa-heart"></i></button>
+                            <button class="remove-btn"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cart Summary -->
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Total:</span>
+                    <span class="total-price">$379.97</span>
+                </div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
