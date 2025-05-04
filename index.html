@@ -1,95 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workshop DOM - Shopping Cart</title>
+  
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
 </head>
 <body>
-    <div class="container">
-        <h1>Shopping Cart</h1>
-        
-        <div class="cart-container">
-            <!-- Cart items container -->
-            <div class="cart-items">
-                <!-- Cart Item 1 -->
-                <div class="cart-item">
-                    <div class="item-image">
-                        <img src="/assets/Measurable Difference Oils.jpg" alt="Product 1">
-                    </div>
-                    <div class="item-details">
-                        <h2 class="item-title">Measurable Oils</h2>
-                        <p class="item-description">Measurable oils are precisely quantifiable liquid fats used in cooking, manufacturing, and therapeutic applications.</p>
-                        <div class="price" data-price="149.99">$149.99</div>
-                        <div class="item-actions">
-                            <div class="quantity-controls">
-                                <button class="minus-btn"><i class="fas fa-minus"></i></button>
-                                <span class="quantity-value">1</span>
-                                <button class="plus-btn"><i class="fas fa-plus"></i></button>
-                            </div>
-                            <button class="like-btn"><i class="fas fa-heart"></i></button>
-                            <button class="remove-btn"><i class="fas fa-trash"></i></button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Cart Item 2 -->
-                <div class="cart-item">
-                    <div class="item-image">
-                        <img src="./assets/Our Lavender Oil.jpg" alt="Product 2">
-                    </div>
-                    <div class="item-details">
-                        <h2 class="item-title">Lavender Oil</h2>
-                        <p class="item-description">Lavender oil is a versatile essential oil derived from lavender flowers known for its calming fragrance and soothing properties.</p>
-                        <div class="price" data-price="199.99">$199.99</div>
-                        <div class="item-actions">
-                            <div class="quantity-controls">
-                                <button class="minus-btn"><i class="fas fa-minus"></i></button>
-                                <span class="quantity-value">1</span>
-                                <button class="plus-btn"><i class="fas fa-plus"></i></button>
-                            </div>
-                            <button class="like-btn"><i class="fas fa-heart"></i></button>
-                            <button class="remove-btn"><i class="fas fa-trash"></i></button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Cart Item 3 -->
-                <div class="cart-item">
-                    <div class="item-image">
-                        <img src="./assets/téléchargement (45).jpg" alt="Product 3">
-                    </div>
-                    <div class="item-details">
-                        <h2 class="item-title">Rose Oil</h2>
-                        <p class="item-description">Rose oil is a luxurious and aromatic essential oil extracted from rose petals through steam distillation</p>
-                        <div class="price" data-price="29.99">$29.99</div>
-                        <div class="item-actions">
-                            <div class="quantity-controls">
-                                <button class="minus-btn"><i class="fas fa-minus"></i></button>
-                                <span class="quantity-value">1</span>
-                                <button class="plus-btn"><i class="fas fa-plus"></i></button>
-                            </div>
-                            <button class="like-btn"><i class="fas fa-heart"></i></button>
-                            <button class="remove-btn"><i class="fas fa-trash"></i></button>
-                        </div>
-                    </div>
-                </div>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Shopping Cart</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <!-- Cart Items -->
+      <div class="col-md-8">
+        <!-- Example Product -->
+        <div class="card mb-3 cart-item">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="assets/Measurable Difference Oils.jpg" class="img-fluid rounded-start" alt="Measurable Oils">
             </div>
-            
-            <!-- Cart Summary -->
-            <div class="cart-summary">
-                <div class="summary-row">
-                    <span>Total:</span>
-                    <span class="total-price">$379.97</span>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Measurable Oils</h5>
+                <p class="card-text">Measurable oils are precisely quantifiable liquid fats used in cooking, manufacturing, and therapeutic applications.</p>
+                <p class="card-text fw-bold price" data-price="149.99">$149.99</p>
+                <div class="d-flex align-items-center item-actions">
+                  <div class="btn-group me-3 quantity-controls">
+                    <button class="btn btn-outline-secondary minus-btn"><i class="fas fa-minus"></i></button>
+                    <span class="px-3 quantity-value">1</span>
+                    <button class="btn btn-outline-secondary plus-btn"><i class="fas fa-plus"></i></button>
+                  </div>
+                  <button class="btn btn-outline-danger me-2 like-btn"><i class="fas fa-heart"></i></button>
+                  <button class="btn btn-outline-dark remove-btn"><i class="fas fa-trash"></i></button>
                 </div>
-                <button class="checkout-btn">Proceed to Checkout</button>
+              </div>
             </div>
+          </div>
         </div>
+
+        <!-- Add more .cart-item cards here (Lavender Oil, Rose Oil...) -->
+
+      </div>
+
+      <!-- Summary -->
+      <div class="col-md-4">
+        <div class="card p-3">
+          <h4 class="mb-3">Summary</h4>
+          <div class="d-flex justify-content-between">
+            <span>Total:</span>
+            <span class="fw-bold total-price">$0.00</span>
+          </div>
+          <button class="btn btn-primary mt-4 w-100 checkout-btn">Proceed to Checkout</button>
+        </div>
+      </div>
     </div>
-    
-    <script src="script.js"></script>
+  </div>
+
+  <!-- Bootstrap JS (optional, for navbar dropdowns) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="script.js"></script>
 </body>
 </html>
